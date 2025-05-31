@@ -48,7 +48,11 @@ def post_review():
     # TODO: Accept review for movie_id == 1 only
     pass
     return jsonify({"message": "Review submitted"}), 201  # Placeholder return
-
+@app.route('/api/reviews', methods=['GET'])
+def get_reviews():
+    #TODO: Accept get all the reviews 
+    return jsonify({"message": "Reviews got"}), 201 
+    
 # Route: Home page
 @app.route('/')
 def home():
@@ -67,16 +71,6 @@ def review_list():
 @app.route('/rate', methods=['GET'])
 def rate_movies():
     # TODO: Render the rating form
-
-
-
-
-
-
-
-
-
-
     pass
     return "Placeholder: Render the movie rating template here"
 
